@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Guia Turístico de Muriaé</title>
+  <link rel="stylesheet" href="Guia_turistico.css">
+</head>
+<body>
+  
+
+  <nav>
+    <button onclick="showSection('inicio')" id="defaultOpen">Início</button>
+    <button onclick="showSection('historia')">História</button>
+    <button onclick="showSection('eventos')">Eventos</button>
+    <button onclick="showSection('pontos')">Pontos Turísticos</button>
+    <button onclick="showSection('imagens')">Imagens</button>
+    <button onclick="showSection('curiosidades')">Curiosidades</button>
+    <button onclick="showSection('formulario')">Formulário</button>
+    <button onclick="showSection('contatos')">Contatos</button>
+  </nav>
+
+  <section id="inicio" class="active">
+    <h1>Bem-vindo a Muriaé!</h1>
+    <img src="img/m.jpg" alt="Imagem de apresentação">
+    <p>Seja bem-vindo a Muriaé, um lugar divertido, interessante e cheio de atrações.</p>
+  </section>
+
+  <section id="historia">
+    <h2>História de Muriaé</h2>
+    <p>Origens e Fundação! 
+      Inicialmente habitada pelos indígenas puris, a região começou a ser 
+      explorada por comerciantes de ervas, madeiras e produtos medicinais que navegavam pelos 
+      rios da bacia do Paraíba do Sul. O marco do povoamento europeu ocorreu em 1817, quando o 
+      bandeirante Constantino José Pinto desceu o Rio Pomba e atingiu o Rio Muriaé, instalando 
+      seu acampamento na área que hoje corresponde ao Largo do Rosário.O local inicialmente foi 
+      chamado de "São Paulo do Manuel Burgo", prestando homenagem ao padroeiro São Paulo, e logo 
+      depois passou a se chamar São Paulo do Muriaé.
+      
+  <!-- Imagem adicionada abaixo do texto -->
+  <img src="img/fdm.jpg" alt="fdm.jpg" class="fdm-img">
+
+
+  </section>
+
+  <section id="eventos">
+    <h2>Eventos e Feriados</h2>
+    <ul>
+      <li>16 de Maio: Dia do Muriaeense</li>
+      <li>04 de Junho: Corpus Christi</li>
+      <li>07 de Setembro: Independência do Brasil</li>
+      <li>Expo Muriaé – evento agropecuário e cultural</li>
+      <li>1 de Janeiro Ano novo!</li>
+        <li>16 de Maio: Dia do Muriaeense</li> 
+      <li>Feriado municipal 29 de Junho: Dia de São Pedro
+      7 de Setembro: Independência do Brasil 
+      <li>25 de Dezembro: Natal Feriado nacional</li>
+    <p style="text-align:right; font-weight:bold; color:#0d6efd;"></p>
+      </ul>
+    
+    
+  </section>
+
+  <section id="pontos">
+    <h2>Pontos Turísticos</h2>
+    <ul>
+      <li>Cristo Redentor <br><img src="img/cr.jpg" alt="Cristo Redentor"></li>
+      <li>Horto Florestal <br><img src="img/ht.jpg" alt="Horto Florestal"></li>
+      <li>Lagoa da Gávea. <br><img src="img/lg.jpg".</li>
+      <p style="text-align:right; font-weight:bold; color:#0d6efd;"></p>
+    </ul>
+  </section>
+
+  <section id="imagens">
+    <h2>Imagens</h2>
+    <img src="img/ap.jpg" alt="Imagem ap">
+    <img src="img/OIP.jpg" alt="Imagem OIP">
+    <img src="img/ct.jpg" alt="imagem ct"
+    <p style="text-align:right; font-weight:bold; color:#0d6efd;"></p>
+  </section>
+
+  <section id="curiosidades">
+    <h2>Curiosidades de Muriaé</h2>
+    <table>
+      <tr><th>Curiosidade</th><th>Descrição</th></tr>
+      <tr><td>Origem do nome</td><td>Vem do rio Muriaé que corta a cidade.</td></tr>
+      <tr><td>Economia</td><td>Polo regional de comércio e serviços.</td></tr>
+      <tr><td>Cultura</td><td>Tradição em festas religiosas e culturais.</td></tr>
+      <tr><td>Natureza</td><td>Cercada por belas paisagens e cachoeiras.</td></tr>
+    </table><
+    <p style="text-align:right; font-weight:bold; color:#0d6efd;"></p>
+  </section>
+
+  <section id="formulario">
+    <h2>Formulário de Contato</h2>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+       
+    </form>
+  </section>
+
+  <section id="contatos">
+    <h2>Contatos</h2>
+    <p>Email: contato@muriae.tur.br</p>
+    <p>Telefone: (32) 3721-0000</p>
+    <p>WhatsApp: (32) 99999-0000</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Guia Turístico de Muriaé</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+    document.getElementById("defaultOpen").click();
+    
+  </script>
+</body>
+</html>
